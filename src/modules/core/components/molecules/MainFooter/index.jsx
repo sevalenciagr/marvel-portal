@@ -47,8 +47,8 @@ export default function MainFooter() {
         </div>
       </div>
       <div className="main-footer__follow">
-        <h4>Follow Marvel</h4>
-        <div className="redes-fotter">
+        <h4 className="texto-follow-marvel">Follow Marvel</h4>
+        <div className="redes-footer">
           <img
             className="vector-redes"
             src="https://static.vecteezy.com/system/resources/previews/001/972/889/non_2x/social-media-logo-in-black-and-white-color-free-vector.png"></img>
