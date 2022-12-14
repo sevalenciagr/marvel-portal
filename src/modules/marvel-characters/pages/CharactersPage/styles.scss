@@ -129,6 +129,8 @@
     z-index: 2;
 }
 
+//Estilos de la imagen.
+
 .Img-Cards{
     width: 160px;
     height: 180px;
@@ -138,15 +140,22 @@
     border-bottom: 2px solid red;
 }
 
+.Cards-General-Characters:hover .Img-Cards { 
+    transform: scale(1.1);   //Funsion Hover que nos permite mover la imagen al poner el click
+    height: 97%;
+}
+
 //Estilos del contener del titulo de cada uno de los personajes. 
+
+.Cards-General-Characters:hover .Cards-Title-Characters {
+    height: 355px;             //Funsion hover que nos pinta el color rojo en el card.
+    background: red;
+}
 
 .Cards-Title-Characters {
     padding: var(--space-sm);
     height: 2px;
-    transition: height 2s;
-    // background: #151515;
-    // color: #e62429;
-    // transition: color .3s;
+    transition: height 1.2s;  //Transicion de tiempo al poner el click.
 }
 
 .Title-Featured-Character {
