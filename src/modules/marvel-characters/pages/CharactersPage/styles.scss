@@ -30,7 +30,7 @@
     justify-content: center;
     align-items: center;
     //border: 1px solid var(--color-border);
-    margin-top: 10px;
+    margin-top: 1%; //10px
 }
 
 //seccion FEATURED SHARACTERS Jeferson Hernandez
@@ -38,8 +38,8 @@
 //Estilos y orden del Titlo FEATURED SHARACTERS.
 
 .Container-Card-Title {
-   margin-top: -350px;         
-   margin-right: -380px;       
+   margin-top:   -36%;     //-350px
+   margin-right: -37%;     //-380px    
 }
 
 .Title-featured-characters{  
@@ -75,9 +75,9 @@
 .Container-Cards-grip-6 { 
     display: grid;    //Hacemos css grip layout.
     grid-template-columns: auto auto auto auto auto auto;
-    grid-column-gap: 10px;
-    margin-top: 80px;
-    margin-left: -25px;
+    grid-column-gap: 10px;       //10px
+    margin-top:  8%;            //80px
+    margin-left: -4.3%;          //-42px
     justify-content: center; 
 }
 
