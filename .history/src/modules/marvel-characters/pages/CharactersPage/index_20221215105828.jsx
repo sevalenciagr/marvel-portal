@@ -9,7 +9,9 @@ export function CharacterPage() {
         <h1 className="u-no-margin">MARVELS CHARACTERS</h1>
         <p>Get a list of all Marvels characters and villians</p>
       </header>
-      <div className="container-section-card">
+
+      <div className="container">
+        <div>
         <section className="mvl-section-card">
           <img
             className="image-card"
@@ -17,8 +19,7 @@ export function CharacterPage() {
             alt=""
           />
         </section>
-      </div>
-      <div className="container">
+        </div>
         <section className="Featured-Characters">
           <div className="Container-Card-Title">
             <h1 className="Title-featured-characters">FEATURED CHARACTERS</h1>

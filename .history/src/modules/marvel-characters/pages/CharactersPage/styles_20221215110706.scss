@@ -7,7 +7,7 @@
 
 .mvl-characters-page-header {
   background-image: url('/assets/images/characters_banner.jpeg');
-  min-height: 300px;
+  min-height: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,14 +82,13 @@
 
 //Estilo principal del las 6 imagenes grip layout.
 
-.Container-Cards-grip-6 { 
-    display: grid;    //Hacemos css grip layout.
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-column-gap: 10px;       //10px
-    margin-top:  8%;            //80px
-    margin-left: -4.3%;          //-42px
-    margin-right: -4%;           //Se mueve a la derecha para centrar con todos.
-    justify-content: center; 
+.Container-Cards-grip-6 {
+  display: grid; //Hacemos css grip layout.
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-column-gap: 10px; //10px
+  margin-top: 8%; //80px
+  margin-left: -4.3%; //-42px
+  justify-content: center;
 }
 
 //Estilos del contenedor general de cada personaje.
