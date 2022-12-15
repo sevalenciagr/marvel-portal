@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: var(--space-lg); */
+  gap: var(--space-lg);
 }
 
 .mvl-characters-page-header {
@@ -15,15 +15,12 @@
   flex-direction: column;
   width: 100%;
 }
-
 .container-section-card {
-
   width: 100%;
-  background:var(--color-primary-dark);
-
+  background-color: black;
 }
 
-.mvl-section-card {
+.mvl-section-card .image-card {
   min-height: 200px;
   display: flex;
   justify-content: center;

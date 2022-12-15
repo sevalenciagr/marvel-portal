@@ -10,14 +10,14 @@ export function CharacterPage() {
         <p>Get a list of all Marvels characters and villians</p>
       </header>
       <div className="container-section-card">
-        <section className="mvl-section-card">
-          <img
-            className="image-card"
-            src="https://tpc.googlesyndication.com/simgad/11660881458541503214"
-            alt=""
-          />
-        </section>
-      </div>
+          <section className="mvl-section-card">
+            <img
+              className="image-card"
+              src="https://tpc.googlesyndication.com/simgad/11660881458541503214"
+              alt=""
+            />
+          </section>
+        </div>
       <div className="container">
         <section className="Featured-Characters">
           <div className="Container-Card-Title">
