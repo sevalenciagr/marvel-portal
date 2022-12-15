@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: var(--space-lg); */
+  gap: var(--space-lg);
 }
 
 .mvl-characters-page-header {
   background-image: url('/assets/images/characters_banner.jpeg');
+  position: ;
   min-height: 300px;
   display: flex;
   justify-content: center;
