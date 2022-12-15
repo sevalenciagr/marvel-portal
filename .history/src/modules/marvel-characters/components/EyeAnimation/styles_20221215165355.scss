@@ -5,7 +5,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 60px;
-}
 
   .eye_container {
     display: flex;
@@ -14,14 +13,13 @@
     
   }
     .eye {
-      background-image: url(https://i.annihil.us/u/prod/marvel/html_pages_assets/error-pages/prod/black-widow-eye.d8a46f86.png);
-      min-width: 111px;
-      min-height: 111px;
-      bottom: 10.9%;
-      margin-left: 9.5%;
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
       position: absolute;
-      right: 23.7%;
+      background-image: url(https://i.annihil.us/u/prod/marvel/html_pages_assets/error-pages/prod/black-widow-eye.d8a46f86.png);
+      background-repeat: no-repeat;
       }
     
-  
+  }
 

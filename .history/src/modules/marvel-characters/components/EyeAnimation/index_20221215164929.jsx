@@ -36,7 +36,7 @@ function Moverojo() {
         <div
           ref={eyeLeft}
           style={{
-            transform: `rotate(${calcAngle(eyeLeft)}deg)`
+            transform: `rotate(${calcAngle(eyeLeft)}deg)`;
           }}
           className="eye"></div>
       </div>

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import 'src/modules/marvel-characters/components/EyeAnimation/styles.scss';
 
 function Moverojo() {
-  const [mouseCoordinates, setMouseCoordinates] = useState({ x: 0, y: 0 });
+  const [mouseCoordinates, setMouseCoordinates] = useState({ x: 10, y: 200 });
 
   const eyeLeft = useRef();
 
@@ -13,7 +13,7 @@ function Moverojo() {
     let elY = element.current.offsetTop + element.current.clientHeight / 2;
 
     var rad = Math.atan2(mouseCoordinates.x - elX, mouseCoordinates.y - elY);
-    var rot = rad * (180 / Math.PI) * -1 + -180;
+    var rot = rad * (180 / Math.PI) * -1 + -18;
 
     return rot;
   }
