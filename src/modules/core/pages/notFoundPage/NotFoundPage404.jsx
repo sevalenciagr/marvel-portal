@@ -1,3 +1,4 @@
+import Moverojo from 'src/modules/marvel-characters/components/EyeAnimation';
 import './NotFoundPage404.scss';
 
 const NotFoundPage404 = () => {
@@ -18,7 +19,9 @@ const NotFoundPage404 = () => {
             </div>
           </div>
           <div className="not_found_img">
-            <div className="error-image-animate"></div>
+            <div className="Moverojo">
+              <Moverojo />
+            </div>
           </div>
         </div>
       </div>
