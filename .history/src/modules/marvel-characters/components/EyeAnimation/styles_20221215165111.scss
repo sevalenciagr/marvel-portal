@@ -1,0 +1,29 @@
+.Moverojo {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+
+  .eye_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    .eye {
+      position: relative;
+      display: inline-block;
+      border-radius: 50%;
+      height: 120px;
+      width: 120px;
+      right: 23.7vw;
+      top:20.5vh;
+      position: absolute;
+      background-image: url(https://i.annihil.us/u/prod/marvel/html_pages_assets/error-pages/prod/black-widow-eye.d8a46f86.png);
+      /* background-repeat: no-repeat; */
+      }
+    }
+  }
+}
