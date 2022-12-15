@@ -18,8 +18,10 @@ export default function MovieList() {
       <ul className="movies__list">
         {movies.map((item, index) => (
           <li key={index} className="movies__list--item">
-            <input value={item} type="checkbox" onChange={handleCheck} />
-            <label className="movies__list--text">{item}</label>
+            <label className="movies__list--text">
+              <input value={item} type="checkbox" onChange={handleCheck} />
+              {item}
+            </label>
           </li>
         ))}
       </ul>

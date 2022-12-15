@@ -14,7 +14,9 @@ export default function MovieFilter() {
     <div className="filters">
       <div className="filters__movie" onClick={handleToggle}>
         <div className="filters__movie--text">MOVIE</div>
-        <RiArrowDropDownFill className="filters__movie icon" />
+        <RiArrowDropDownFill
+          className={`filters__movie icon ${toggle && 'filters__movie__icon-open'}`}
+        />
       </div>
       {toggle && <MovieList />}
     </div>
