@@ -5,9 +5,9 @@ import { RiArrowDropDownFill } from 'react-icons/ri';
 export default function MovieFilter() {
   const [toggle, setToggle] = useState(false);
   const [checked, setChecked] = useState([]);
+  let updatedList = [...checked];
 
   const handleCheck = (e) => {
-    let updatedList = [...checked];
     if (e.target.checked) {
       updatedList = [...checked, e.target.value];
     } else {
@@ -36,15 +36,21 @@ export default function MovieFilter() {
           </div>
           <div className="movies__buttons--right">
             <button className="movies__buttons">Reset</button>
-            <button className="movies__buttons">Close</button>
+            <button className="movies__buttons" onClick={close}>
+              Close
+            </button>
           </div>
         </div>
       </div>
     );
   }
 
+  const close = () => {
+    setToggle(false);
+  };
+
   const handleToggle = () => {
-    setToggle(!toggle);
+    setToggle((prevToggle) => !prevToggle);
   };
 
   //Este es el "return" de <MovieFilter />
