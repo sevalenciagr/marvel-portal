@@ -97,20 +97,22 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    cursor: pointer;
 }
 
 .filters__movie--text {
     font-weight: 500;
+    cursor: pointer;
 }
 
 .filters__movie.icon {
     width: 1.4rem;
     height: 1.4rem;
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 .filters__movie__icon-open {
+    color: red;
     rotate: 180deg 0;
     opacity: 1;
     transition-duration: 0.5s;
@@ -168,6 +170,11 @@
     height: 20px;
     justify-content: space-between;
     border: none;
+}
+
+.movies__buttons--left {
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 .movies__buttons--right {
