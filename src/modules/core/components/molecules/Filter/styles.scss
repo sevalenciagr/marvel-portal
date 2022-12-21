@@ -99,6 +99,10 @@
     justify-content: flex-end;
 }
 
+.filters__movie:hover {
+    color: red;
+}
+
 .filters__movie--text {
     font-weight: 500;
     cursor: pointer;
@@ -177,6 +181,16 @@
     pointer-events: none;
 }
 
+.movies__buttons--enabled button{
+    cursor: pointer;
+    pointer-events: auto;
+    color: red;
+}
+
 .movies__buttons--right {
     display: flex;
+}
+
+.movies__buttons--right button:hover {
+    color: #151515;
 }
