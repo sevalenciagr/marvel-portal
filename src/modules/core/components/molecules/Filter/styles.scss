@@ -7,6 +7,7 @@
 .search-bar {
     padding: 70px 0px 0;
     display: flex;
+    border-bottom: 3px solid #151515;
 }
 
 .typeahead {
@@ -15,7 +16,6 @@
     display: flex;
     position: relative;
     width: 100%;
-    border-bottom: 1px solid #151515;
 }
 
 .typeahead__icon {
@@ -84,6 +84,8 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #767676;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 //'Series' button styles
 .filters {
@@ -104,8 +106,10 @@
 }
 
 .filters__serie--text {
-    font-weight: 500;
+    font-weight: 700;
+    letter-spacing: 2px;
     cursor: pointer;
+    padding-top: 13px;
 }
 
 .filters__serie.icon {

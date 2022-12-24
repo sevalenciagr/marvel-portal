@@ -22,17 +22,17 @@ export default function SerieFilter() {
     setToggle((prevToggle) => !prevToggle);
   };
 
-  const onClose = () => {
+  function onClose() {
     setToggle(false);
-  };
+  }
 
-  const onReset = () => {
+  function onReset() {
     console.log('Reset');
-  };
+  }
 
-  const onApply = () => {
+  function onApply() {
     console.log('Apply');
-  };
+  }
 
   return (
     <div className="filters">
@@ -42,7 +42,7 @@ export default function SerieFilter() {
           className={`filters__serie icon ${toggle && 'filters__serie__icon-open'}`}
         />
       </div>
-      <div className="series">
+      <div className={toggle ? 'series' : 'null'}>
         {toggle && <SeriesList series={series} />}
         {toggle && <SeriesButtons onClose={onClose} onApply={onApply} onReset={onReset} />}
       </div>
