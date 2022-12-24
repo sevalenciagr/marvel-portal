@@ -85,7 +85,7 @@
     text-transform: uppercase;
     color: #767676;
 }
-//'Movies' button styles
+//'Series' button styles
 .filters {
     font-size: 1rem;
     width: 100%;
@@ -93,36 +93,36 @@
     justify-content: flex-end;
 }
 
-.filters__movie {
+.filters__serie {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
 
-.filters__movie:hover {
+.filters__serie:hover {
     color: red;
 }
 
-.filters__movie--text {
+.filters__serie--text {
     font-weight: 500;
     cursor: pointer;
 }
 
-.filters__movie.icon {
+.filters__serie.icon {
     width: 1.4rem;
     height: 1.4rem;
     transition-duration: 0.5s;
     cursor: pointer;
 }
 
-.filters__movie__icon-open {
+.filters__serie__icon-open {
     color: red;
     rotate: 180deg 0;
     opacity: 1;
     transition-duration: 0.5s;
 }
-//Movies container styles
-.movies {
+//Series container styles
+.series {
     background-color: white;
     width: 480px;
     position: absolute;
@@ -130,7 +130,7 @@
     z-index: 50;
 }
 
-.movies__list {
+.series__list {
     list-style-type: none;
     max-height: 280px;
     font-weight: 500;
@@ -140,21 +140,21 @@
     box-sizing: border-box;
 }
 
-.movies__list--item {
+.series__list--item {
     margin-bottom: inherit;
 }
 
-.movies__list input {
+.series__list input {
     cursor: pointer;
     margin-right: 15px;
 }
 
-.movies__list--text {
+.series__list--text {
     padding-left: 15px;
     cursor: pointer;
 }
 //Buttons container styles
-.movies__buttons--container {
+.series__buttons--container {
     display: flex;  
     justify-content: space-between;
     border-top: 1px  solid #dfdfdf;
@@ -162,7 +162,7 @@
     padding-top: 15px;
 }
 
-.movies__buttons {
+.series__buttons {
     color: #858585;
     display: flex;
     background-color: transparent;
@@ -176,21 +176,21 @@
     border: none;
 }
 
-.movies__buttons--left {
+.series__buttons--left {
     cursor: not-allowed;
     pointer-events: none;
 }
 
-.movies__buttons--enabled button{
+.series__buttons--enabled button{
     cursor: pointer;
     pointer-events: auto;
     color: red;
 }
 
-.movies__buttons--right {
+.series__buttons--right {
     display: flex;
 }
 
-.movies__buttons--right button:hover {
+.series__buttons--right button:hover {
     color: #151515;
 }
