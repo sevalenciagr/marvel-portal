@@ -39,7 +39,7 @@ export default function Filter({ totalItems }) {
           <SerieFilter />
         </div>
         <div>
-          <h5 className="results_totalItems">{totalItems} RESULTS TOTAL ITEMS API </h5>
+          <h5 className="results_totalItems">{totalItems} RESULTS.</h5>
         </div>
       </section>
     </div>
