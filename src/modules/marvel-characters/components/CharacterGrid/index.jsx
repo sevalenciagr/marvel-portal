@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { getCharactersForGrid } from '@/modules/marvel-characters/services';
+import { getCharactersForGrid2 } from '@/modules/marvel-characters/services';
 
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
@@ -11,23 +12,40 @@ import Filter from '@/modules/core/components/molecules/Filter';
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
-export default function CharacterGridPaginated() {
+CharacterGridPaginated.proptotypes = {
+  busqueda: PropTypes.string,
+  n: PropTypes.number
+};
+export default function CharacterGridPaginated({ n, busqueda, orden }) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [queryParams, setQueryParams] = useState({});
+
+  const name = {
+    nameStartsWith: busqueda
+  };
 
   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
 
   async function fetchCharactersAtPage(page = 1) {
-    setLoading(true);
-    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
-    setTotalItems(data.total);
-    setCharacters(data.results);
-    setLoading(false);
-    console.log(data.total);
+    if (n == 1) {
+      setLoading(true);
+      const data = await getCharactersForGrid2(page, ITEMS_PER_PAGE);
+      setTotalItems(data.total);
+      setCharacters(data.results);
+      setLoading(false);
+    }
+    if (n == 2) {
+      setLoading(true);
+      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, name);
+      setTotalItems(data.total);
+      setCharacters(data.results);
+      setLoading(false);
+      console.log(data.total);
+    }
   }
 
   const onPageChange = (newPage) => {
@@ -37,7 +55,6 @@ export default function CharacterGridPaginated() {
   const onQueryChange = (query) => {
     setQueryParams(query);
   };
-
   return (
     <>
       <Filter query={queryParams} onQueryChange={onQueryChange} totalItems={totalItems} />
@@ -50,6 +67,7 @@ export default function CharacterGridPaginated() {
       </div>
       <Paginator
         initialPage={INITIAL_PAGE}
+        F
         itemsPerPage={ITEMS_PER_PAGE}
         totalItems={totalItems}
         onPageChange={onPageChange}

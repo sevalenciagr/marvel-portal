@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
 import './styles.scss';
 
 export function CharacterPage() {
+  const [text, setText] = useState('');
+
+  function Peticion() {
+    if (text.length < 3) {
+      return <CharactersGrid n={1} busqueda={text} />;
+    } else {
+      return <CharactersGrid n={2} busqueda={text} />;
+    }
+  }
+
   return (
     <div className="mvl-characters-page">
       <header className="mvl-characters-page-header">
@@ -94,6 +104,17 @@ export function CharacterPage() {
         <br></br>
         <br></br>
         <h1>MARVEL CHARACTERS LIST</h1>
+        <input
+          type="text"
+          placeholder="Search"
+          className=""
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <h1>{text}</h1>
+        <h1>{text.length}</h1>
+        <Peticion />
+
         <CharactersGrid />
       </div>
     </div>

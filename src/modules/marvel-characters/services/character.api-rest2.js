@@ -4,21 +4,20 @@ import { mapCharacterToCard } from '@/modules/marvel-characters/services';
 
 const domain = `characters`;
 
-export async function getCharatersAtPage(
+export async function getCharactersAtPage2(
   page,
   itemsPerPage,
-  name,
   { mappedBy = defaultMapper, queryParams = {} }
 ) {
-  return getAllPaginated(domain, page, name, {
+  return getAllPaginated(domain, page, {
     mappedBy,
     itemsPerPage,
     ...queryParams
   });
 }
 
-export function getCharactersForGrid(page, itemsPerPage) {
-  return getCharatersAtPage(page, itemsPerPage, {
+export function getCharactersForGrid2(page, itemsPerPage) {
+  return getCharactersAtPage2(page, itemsPerPage, {
     mappedBy: mapCharacterToCard
   });
 }
