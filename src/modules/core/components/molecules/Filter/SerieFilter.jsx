@@ -22,7 +22,7 @@ export default function SerieFilter() {
     setToggle((prevToggle) => !prevToggle);
   };
 
-  function onClose() {
+  const onClose = () => {
     setToggle(false);
   }
 
@@ -49,7 +49,7 @@ export default function SerieFilter() {
     </div>
   );
 }
-
+//Funciones para las series
 const renderSeries = (series) => {
   const renderSerie = (serie) => (
     <li key={serie.id} className="series__list--item">
@@ -77,20 +77,26 @@ SeriesList.propTypes = {
   // id: PropTypes.number,
   // title: PropTypes.string
 };
+//Funciones para los botones
+SeriesButtons.propTypes = {
+  onClose: PropTypes.func,
+  onReset: PropTypes.func,
+  onApply: PropTypes.func
+}
 
-const SeriesButtons = (onClose, onReset, onApply) => {
+function SeriesButtons({ onClose, onReset, onApply }) {
   return (
     <div className="series__buttons--container">
       <div className="series__buttons--left">
-        <button className="series__buttons" onClick={() => onApply}>
+        <button className="series__buttons" onClick={onApply}>
           Apply
         </button>
       </div>
       <div className="series__buttons--right">
-        <button className="series__buttons" onClick={() => onReset}>
+        <button className="series__buttons" onClick={onReset}>
           Reset
         </button>
-        <button className="series__buttons" onClick={() => onClose}>
+        <button className="series__buttons" onClick={onClose}>
           Close
         </button>
       </div>
