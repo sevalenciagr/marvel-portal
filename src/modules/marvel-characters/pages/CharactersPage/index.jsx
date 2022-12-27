@@ -1,6 +1,8 @@
 import React from 'react';
 import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
 import './styles.scss';
+import CharacterSpotlight from 'src/modules/core/components/molecules/CharacterSpotlight';
+
 export function CharacterPage() {
   return (
     <div className="mvl-characters-page">
@@ -92,6 +94,7 @@ export function CharacterPage() {
         </div>
         <br></br>
         <br></br>
+        <CharacterSpotlight />
         <h1>MARVEL CHARACTERS LIST</h1>
         <CharactersGrid />
       </div>
