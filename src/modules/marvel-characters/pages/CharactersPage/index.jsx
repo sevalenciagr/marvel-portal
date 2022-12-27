@@ -1,7 +1,6 @@
 import React from 'react';
 import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
 import './styles.scss';
-
 export function CharacterPage() {
   return (
     <div className="mvl-characters-page">
