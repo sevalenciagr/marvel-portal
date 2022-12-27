@@ -11,8 +11,7 @@ Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
 };
 
-
-export default function Filter({ totalItems }) {
+export default function Filter({ characters, query, onQueryChange, totalItems }) {
   const [toggle, setToggle] = useState(false);
 
   const onToggle = () => {
