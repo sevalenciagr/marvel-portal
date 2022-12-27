@@ -78,7 +78,7 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
   ));
 }
 
-const EmptyState = () => {
+export const EmptyState = () => {
   return <h1>No elements found</h1>;
 };
 
