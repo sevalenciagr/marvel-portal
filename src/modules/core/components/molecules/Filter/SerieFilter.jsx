@@ -24,7 +24,7 @@ export default function SerieFilter() {
 
   const onClose = () => {
     setToggle(false);
-  }
+  };
 
   function onReset() {
     console.log('Reset');
@@ -82,7 +82,7 @@ SeriesButtons.propTypes = {
   onClose: PropTypes.func,
   onReset: PropTypes.func,
   onApply: PropTypes.func
-}
+};
 
 function SeriesButtons({ onClose, onReset, onApply }) {
   return (
@@ -102,4 +102,4 @@ function SeriesButtons({ onClose, onReset, onApply }) {
       </div>
     </div>
   );
-};
+}
