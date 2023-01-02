@@ -1,5 +1,4 @@
 import { getAll } from '@/modules/core/services';
-import { defaultMapper } from './mapper';
 
 const domain = `characters/1011334/comics`;
 
@@ -10,7 +9,7 @@ export async function getComicsList({ mappedBy, queryParams }) {
   });
 }
 export function getComics() {
-  return getComicsList({ mappedBy: defaultMapper });
+  return getComicsList({ mappedBy: mapComicToCard });
 }
 
 /* traer la imagen de la api */

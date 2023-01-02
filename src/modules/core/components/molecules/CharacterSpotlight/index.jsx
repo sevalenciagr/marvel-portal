@@ -26,51 +26,6 @@ export default function CharacterSpotlight() {
         </div>
         <div className="container-grid-comics">
           <ComicsGrid comics={comics} isLoading={Loading} itemsPerPage={ITEM_PER_PAGE} />
-          {/* <div>
-            <div>
-              <img
-                className="image-comics"
-                src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/namor_card_image.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <p className="container-text-comics">COMICS</p>
-              <a className="link-comics" href="#">
-                Aqui va el titulo
-              </a>
-            </div>
-          </div> /}
-          {/ <div>
-            <div>
-              <img
-                className="image-comics"
-                src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/scott_cassie_card_image_copy.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <p className="container-text-comics">COMICS</p>
-              <a className="link-comics" href="#">
-                Aqui va el titulo
-              </a>
-            </div>
-          </div> /}
-          {/ <div>
-            <div>
-<img
-                className="image-comics"
-                src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/_silk_card.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <p className="container-text-comics">COMICS</p>
-              <a className="link-comics" href="#">
-                Aqui va el titulo
-              </a>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
@@ -95,21 +50,23 @@ function ComicsGrid({ comics, isLoading, itemsPerPage }) {
   return comics.map(({ title, image }, index) => <Comic title={title} image={image} key={index} />);
 }
 
-/* Comic.propTypes = {
+const Comic = ({ title, image }) => {
+  return (
+    <div>
+      <div>
+        <img className="image-comics" src={image} alt="aquí esta la imagen" />
+      </div>
+      <div>
+        <p className="container-text-comics">COMICS</p>
+        <a className="link-comics" href="#">
+          {title}
+        </a>
+      </div>
+    </div>
+  );
+};
+
+Comic.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string
-}; */
-
-const Comic = ({ image, title }) => {
-  <div>
-    <div>
-      <img className="image-comics" src={image} alt="" />
-    </div>
-    <div>
-      <p className="container-text-comics">COMICS</p>
-      <a className="link-comics" href="#">
-        {title}
-      </a>
-    </div>
-  </div>;
 };
