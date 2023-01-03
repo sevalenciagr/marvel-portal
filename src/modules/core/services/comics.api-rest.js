@@ -1,15 +1,19 @@
 import { getAll } from '@/modules/core/services';
+import { defaultMapper } from './mapper';
 
-const domain = `characters/1011334/comics`;
+const domain = `comics`;
 
-export async function getComicsList({ mappedBy, queryParams }) {
+export async function getComicsList(itemsPerPage, { mappedBy = defaultMapper, queryParams = {} }) {
   return getAll(domain, {
     mappedBy,
-    queryParams
+    itemsPerPage,
+    ...queryParams
   });
 }
-export function getComics() {
-  return getComicsList({ mappedBy: mapComicToCard });
+export function getComics(itemsPerPage) {
+  return getComicsList(itemsPerPage, {
+    mappedBy: mapComicToCard
+  });
 }
 
 /* traer la imagen de la api */

@@ -13,7 +13,7 @@ export default function CharacterSpotlight() {
     fetchComics();
   }, []);
   async function fetchComics() {
-    const data = await getComics();
+    const data = await getComics(ITEM_PER_PAGE);
     setComics(data.results);
     console.log(data);
   }
@@ -46,8 +46,9 @@ function ComicsGrid({ comics, isLoading, itemsPerPage }) {
   if (comics.length === 0) {
     return <EmptyState />;
   }
-
-  return comics.map(({ title, image }, index) => <Comic title={title} image={image} key={index} />);
+  return comics
+    .slice(9, 13)
+    .map(({ title, image }, index) => <Comic title={title} image={image} key={index} />);
 }
 
 const Comic = ({ title, image }) => {
