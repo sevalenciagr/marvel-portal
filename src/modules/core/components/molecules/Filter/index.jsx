@@ -5,8 +5,12 @@ import SerieFilter from './SerieFilter';
 import { RiArrowDropDownFill } from 'react-icons/ri';
 
 Filter.propTypes = {
+  characters: PropTypes.array.isRequired,
+  query: { name: PropTypes.string.isRequired },
+  onQueryChange: PropTypes.func.isRequired,
   totalItems: PropTypes.number.isRequired
 };
+
 
 export default function Filter({ totalItems }) {
   const [toggle, setToggle] = useState(false);
@@ -57,7 +61,25 @@ export default function Filter({ totalItems }) {
                 </span>
               </div>
               <div className="typeahead__container">
-                <input className="typeahead__input" type="text" placeholder="search" />
+                <input
+                  className="typeahead__input"
+                  type="text"
+                  autoComplete="off"
+                  placeholder="search"
+                  aria-autocomplete="list"
+                  value={query.name}
+                  onChange={(event) => onQueryChange({ ...query, name: event.target.value })}
+                  list="suggestions"
+                />
+                <datalist id="suggestions">
+                  {query.name.length >= 3 &&
+                    characters
+                      .filter((item) =>
+                        item.name.toLowerCase().includes(query.name.trim().toLowerCase())
+                      )
+                      .slice(0, 5)
+                      .map((item) => <option key={item.name}>{item.name}</option>)}
+                </datalist>
               </div>
             </div>
           </div>
