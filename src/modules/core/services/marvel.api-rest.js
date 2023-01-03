@@ -1,5 +1,6 @@
 import { getAndMap } from '@/modules/core/services';
 import { defaultMapper } from '@/modules/core/services';
+import { sort } from '@/modules/core/components/molecules/Filter/index.jsx';
 
 const BASE_URL = `https://gateway.marvel.com/v1/public/`;
 const PAGENATE_BY = 20;
@@ -8,12 +9,7 @@ const credentials = {
   apikey: process.env.REACT_APP_PUBLIC_KEY
 };
 
-const orderAZ = {
-  orderBy: 'name'
-};
-const orderZA = {
-  orderBy: '-name'
-};
+const orderBy = sort;
 
 export async function getAllPaginated(
   domain,
@@ -34,8 +30,7 @@ export async function getAll(domain, { mappedBy = defaultMapper, queryParams = {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
     queryParams: {
-      ...orderAZ,
-      ...orderZA,
+      ...orderBy,
       ...queryParams,
       ...credentials
     }

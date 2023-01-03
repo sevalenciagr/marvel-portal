@@ -10,6 +10,24 @@ Filter.propTypes = {
 
 export default function Filter({ totalItems }) {
   const [toggle, setToggle] = useState(false);
+  const [order, setorder] = useState(true);
+
+  function AZ() {
+    setorder(true);
+  }
+
+  function ZA() {
+    setorder(false);
+  }
+
+  const sort = () => {
+    if (order) {
+      return 'name';
+    }
+    if (!order) {
+      return '-name';
+    }
+  };
 
   const onToggle = () => {
     setToggle((prevToggle) => !prevToggle);
@@ -62,7 +80,7 @@ export default function Filter({ totalItems }) {
                     </div>
                   </div>
                 </div>
-                {toggle && <Sortby />}
+                {toggle && <Sortby AZ={AZ} ZA={ZA} />}
               </div>
             </div>
           </div>
@@ -72,14 +90,19 @@ export default function Filter({ totalItems }) {
   );
 }
 
-function Sortby() {
+Sortby.propTypes = {
+  AZ: PropTypes.func,
+  ZA: PropTypes.func
+};
+
+function Sortby({ AZ, ZA }) {
   return (
     <div className="dropdown_menu">
       <div className="dropdown_content">
-        <a href="" value="A-Z" className="dropdown_item">
+        <a href="" value="A-Z" className="dropdown_item" onClick={AZ}>
           A-Z
         </a>
-        <a href="" value="Z-A" className="dropdown_item">
+        <a href="" value="Z-A" className="dropdown_item" onClick={ZA}>
           Z-A
         </a>
       </div>
