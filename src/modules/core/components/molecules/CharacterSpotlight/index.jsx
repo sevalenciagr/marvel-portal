@@ -54,10 +54,10 @@ function ComicsGrid({ comics, isLoading, itemsPerPage }) {
 const Comic = ({ title, image }) => {
   return (
     <div>
-      <div>
+      <div className="container-comics">
         <img className="image-comics" src={image} alt="aquí esta la imagen" />
       </div>
-      <div>
+      <div className="container-comics">
         <p className="container-text-comics">COMICS</p>
         <a className="link-comics" href="#">
           {title}
