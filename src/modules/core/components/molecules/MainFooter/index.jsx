@@ -1,4 +1,13 @@
 import './styles.scss';
+import {
+  GrFacebook,
+  GrTwitter,
+  GrInstagram,
+  GrTumblr,
+  GrYoutube,
+  GrSnapchat,
+  GrPinterest
+} from 'react-icons/gr';
 
 export default function MainFooter() {
   return (
@@ -74,47 +83,55 @@ export default function MainFooter() {
         </div>
       </div>
       <div className="main-footer__follow">
-        {/* 
-        <div className="redes-footer">
-          <img
-            className="vector-redes"
-            src="https://static.vecteezy.com/system/resources/previews/001/972/889/non_2x/social-media-logo-in-black-and-white-color-free-vector.png"></img>
-        </div> */}
         <h4 className="texto-follow-marvel">Follow Marvel</h4>
         <ul>
           <li>
             <a href="http://facebook.com/marvel">
-              <span>Facebook</span>
+              <span>
+                <GrFacebook />
+              </span>
             </a>
           </li>
           <li>
             <a href="http://twitter.com/marvel">
-              <span>Twitter</span>
+              <span>
+                <GrTwitter />
+              </span>
             </a>
           </li>
           <li>
             <a href="http://instagram.com/marvel">
-              <span>Instagram</span>
+              <span>
+                <GrInstagram />
+              </span>
             </a>
           </li>
           <li>
             <a href="http://marvelentertainment.tumblr.com/">
-              <span>Tumblr</span>
+              <span>
+                <GrTumblr />
+              </span>
             </a>
           </li>
           <li>
             <a href="http://youtube.com/marvel">
-              <span>YouTube</span>
+              <span>
+                <GrYoutube />
+              </span>
             </a>
           </li>
           <li>
             <a href="https://www.snapchat.com/add/marvelhq">
-              <span>Sanpchat</span>
+              <span>
+                <GrSnapchat />
+              </span>
             </a>
           </li>
           <li>
             <a href="https://www.pinterest.com/marvelofficial">
-              <span>Pinterest</span>
+              <span>
+                <GrPinterest />
+              </span>
             </a>
           </li>
         </ul>
