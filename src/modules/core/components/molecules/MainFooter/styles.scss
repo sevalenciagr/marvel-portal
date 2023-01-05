@@ -1,5 +1,5 @@
 .mvl-main-footer{
-    height: 400px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,9 +7,18 @@
     color: var(--color-accent);
 }
 
+.Container-Footer-Completed {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: -1%;
+    margin-right: -55%;
+    margin-left: 2%;
+}
+
 .container-imagen-m{
     margin-left: -150px;
-    margin-top: 35px;
+    margin-top: -50px;
     margin-right: -25px;
     width: 20%;
 }
@@ -131,5 +140,32 @@
 }
 
 .texto-follow-marvel{
-    margin-left: 40px;
+    margin-left: 57px;
+}
+
+.Text-Final-Footer {
+   display: flex;
+   position: relative;
+   top:  30%;
+   right: 32%;
+   justify-content: center;
+
+}
+
+.Container-Text-Final {
+    display:flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
+    grid-column-gap: 55px; 
+    margin-right: -450px;
+    margin-left: 100px;
+}
+
+.Text-Final-Footer {
+    display:flex;
+    font-size: small;
+    margin-left: -17px; //Sebitas.
+    margin-right: 20px;
+    color: aliceblue;
 }
