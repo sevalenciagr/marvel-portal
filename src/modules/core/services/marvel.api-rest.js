@@ -8,12 +8,12 @@ const credentials = {
   apikey: process.env.REACT_APP_PUBLIC_KEY
 };
 
-const orderAZ = {
-  orderBy: 'name'
-};
-const orderZA = {
-  orderBy: '-name'
-};
+// const orderAZ = {
+//   orderBy: 'name'
+// };
+// const orderZA = {
+//   orderBy: '-name'
+// };
 
 export async function getAllPaginated(
   domain,
