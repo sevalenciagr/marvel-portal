@@ -3,7 +3,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  //grid-template-columns: 20% 15% 15% 25% 20%;
   color: white;
   height: 350px;
   align-items: center;
@@ -38,12 +37,12 @@
 
 .menu-footer-primer-link {
   display: flex;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .menu-footer-segundo-link {
   display: flex;
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .menu-footer-promo {
@@ -89,7 +88,7 @@
 }
 
 .icono-1 {
-  margin-right: 90px;
+  margin-right: 30px;
   h4 {
     font-size: 14px;
     margin-bottom: 20px;
@@ -113,12 +112,7 @@
    justify-content: center;
    position: absolute;
    width: 100%;
-  // display: grid;
-  //  grid-template-columns: 30% 15% 15% 40% 35%;
-  //  left: 300px;
-   margin-top: -90px;
-   margin-left: 50px;
-  //  text-align: center;
+   margin-top: -70px;
 }  
 
 .Container-Footer-Completed nav {
@@ -135,10 +129,6 @@
 .Container-Text-Final {
     display:flex;
     position: relative;
-    //display: grid;
-    //grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
     grid-column-gap: 20px; 
-    //justify-content: center;
-    //left: 670px;
     top: 115px;
 }
