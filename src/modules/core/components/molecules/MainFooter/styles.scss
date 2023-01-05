@@ -94,13 +94,18 @@
 .Container-Footer-Completed {
    display: flex;
    justify-content: center;
-   position: relative;
-}
+   position: absolute;
+   display: grid;
+   grid-template-columns: 30% 20% 15% 40% 35%;
+   left: 300px;
+   margin-top: 60px;
+}  
 
 .Text-Final-Footer {
     display: flex;
     justify-content: center;
     position: relative;
+    font-size: small;
 }
 
 .Container-Text-Final {
@@ -108,7 +113,7 @@
     position: relative;
     display: grid;
     grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
-    grid-column-gap: 55px; 
-    left: 675px;
-    top: -5px;
+    grid-column-gap: 40px; 
+    left: 670px;
+    top: 110px;
 }
