@@ -53,7 +53,7 @@ function ComicsGrid({ comics, isLoading, itemsPerPage }) {
 
 const Comic = ({ title, image }) => {
   return (
-    <div>
+    <div className="container-principal">
       <div className="container-comics">
         <img className="image-comics" src={image} alt="aquí esta la imagen" />
       </div>
