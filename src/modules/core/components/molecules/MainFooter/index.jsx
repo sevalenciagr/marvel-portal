@@ -1,5 +1,5 @@
 import './styles.scss';
-/* import {
+import {
   GrFacebook,
   GrTwitter,
   GrInstagram,
@@ -7,7 +7,7 @@ import './styles.scss';
   GrYoutube,
   GrSnapchat,
   GrPinterest
-} from 'react-icons/gr'; */
+} from 'react-icons/gr';
 
 import React from 'react';
 export default function MainFooter() {
@@ -91,55 +91,51 @@ export default function MainFooter() {
           <h4 className="menu-footer-titulo">FOLLOW MARVEL</h4>
           <ul className="menu-footer-social-links footer-social">
             <li className="menu-footer-social-imagen">
-              <a href="">
+              <a href="http://facebook.com/marvel">
                 <span>
-                  <img className="icono" src="https://i.postimg.cc/KcNzCqnN/facebook.png" alt="" />
+                  <GrFacebook className="icono" />
                 </span>
               </a>
             </li>
             <li className="menu-footer-social-imagen">
-              <a href="">
+              <a href="http://twitter.com/marvel">
                 <span>
-                  <img className="icono" src="https://i.postimg.cc/W1SxvZ5x/twitter.png" alt="" />
+                  <GrTwitter className="icono" />
                 </span>
               </a>
             </li>
             <li className="menu-footer-social-imagen">
-              <a href="">
+              <a href="http://instagram.com/marvel">
                 <span>
-                  <img className="icono" src="https://i.postimg.cc/90KZTLXs/instagram.png" alt="" />
+                  <GrInstagram className="icono" />
                 </span>
               </a>
             </li>
             <li className="menu-footer-social-imagen">
-              <a href="">
+              <a href="http://marvelentertainment.tumblr.com/">
                 <span>
-                  <img className="icono" src="https://i.postimg.cc/HW9xfpqR/tumblr.png" alt="" />
+                  <GrTumblr className="icono" />
                 </span>
               </a>
             </li>
             <li className="menu-footer-social-imagen">
-              <a href="">
+              <a href="http://youtube.com/marvel">
                 <span>
-                  <img className="icono" src="https://i.postimg.cc/ZnCMFYpn/youtube.png" alt="" />
+                  <GrYoutube className="icono" />
                 </span>
               </a>
             </li>
             <li className="menu-footer-social-imagen">
-              <a href="">
+              <a href="https://www.snapchat.com/add/marvelhq">
                 <span>
-                  <img className="icono" src="https://i.postimg.cc/nV4kgDcx/snapchat.png" alt="" />
+                  <GrSnapchat className="icono" />
                 </span>
               </a>
             </li>
             <li className="menu-footer-social-imagen">
-              <a href="">
+              <a href="https://www.pinterest.com/marvelofficial">
                 <span>
-                  <img
-                    className="icono"
-                    src="https://i.postimg.cc/MHnjWg2g/pinterest2.png"
-                    alt=""
-                  />
+                  <GrPinterest className="icono" />
                 </span>
               </a>
             </li>
@@ -149,62 +145,3 @@ export default function MainFooter() {
     </>
   );
 }
-
-/*      <div className="main-footer__follow">
-        <h4 className="texto-follow-marvel">Follow Marvel</h4>
-        <ul className="ul-principal">
-          <li>
-            <a href="http://facebook.com/marvel">
-              <span>
-                <GrFacebook />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="http://twitter.com/marvel">
-              <span>
-                <GrTwitter />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="http://instagram.com/marvel">
-              <span>
-                <GrInstagram />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="http://marvelentertainment.tumblr.com/">
-              <span>
-                <GrTumblr />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="http://youtube.com/marvel">
-              <span>
-                <GrYoutube />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.snapchat.com/add/marvelhq">
-              <span>
-                <GrSnapchat />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.pinterest.com/marvelofficial">
-              <span>
-                <GrPinterest />
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-  );
-}
- */

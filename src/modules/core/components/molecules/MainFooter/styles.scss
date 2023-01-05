@@ -13,7 +13,7 @@
 
   a {
     text-decoration: none;
-    color: white;
+    color: gray;
   }
 
   ul {
@@ -22,7 +22,7 @@
   }
 
   a:hover {
-    color: gray;
+    color: white;
   }
 }
 
@@ -71,14 +71,14 @@
 }
 
 .icono-1 {
-  margin-right: 50px;
+  margin-right: 90px;
   h4 {
     font-size: 14px;
     margin-bottom: 20px;
   }
 
   ul {
-    @include grid(3, 0, 100%);
+    @include grid(4, 0, 100%);
     padding: 0;
   }
 }
