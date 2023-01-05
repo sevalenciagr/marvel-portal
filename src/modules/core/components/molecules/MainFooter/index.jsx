@@ -1,5 +1,5 @@
 import './styles.scss';
-import {
+/* import {
   GrFacebook,
   GrTwitter,
   GrInstagram,
@@ -7,84 +7,152 @@ import {
   GrYoutube,
   GrSnapchat,
   GrPinterest
-} from 'react-icons/gr';
+} from 'react-icons/gr'; */
 
+import React from 'react';
 export default function MainFooter() {
   return (
-    <footer className="mvl-main-footer">
-      <div className="container-imagen-m">
-        <img
-          className="imagen-m"
-          src="https://www.marvel.com/static/images/favicon/mstile-150x150.png"></img>
-      </div>
-      <div className="marvel-about">
-        <ul className="list1-footer">
-          <li className="text-footer">
-            <a href="https://www.marvel.com/corporate/about">About Marvel</a>
-          </li>
-          <li className="text-footer">
-            <a href="https://help.marvel.com">Help/FAQs</a>
-          </li>
-          <li className="text-footer">
-            <a href="https://jobs.disneycareers.com/search-jobs?orgIds=391-1635-24091&amp;ascf=[{%22key%22:%22custom_fields%252EIndustryCustomField%22,%22value%22:%22Marvel%20Entertainment%22}]">
-              Careers
-            </a>
-          </li>
-          <li className="text-footer">
-            <a href="https://www.marvel.com/corporate/interns">Internships</a>
-          </li>
-        </ul>
-      </div>
-      <div className="cuadro2">
-        <ul className="list2-footer">
-          <li className="text-footer">
-            <a href="https://www.marvel.com/corporate/advertising">Advertising</a>
-          </li>
-          <li className="text-footer">
-            <a href="https://www.disneyplus.com/brand/marvel?cid=DTCI-Synergy-Marvel-Site-Acquisition-Library-US-Marvel-NA-EN-NavFooter-Marvel_DisneyPlus_NavFooter_Evergreen-NA">
-              Disney+
-            </a>
-          </li>
-          <li className="text-footer">
-            <a href="https://www.marvelhq.com">Marvelhq.com</a>
-          </li>
-          <li className="text-footer">
-            <a href="https://www.marvel.com/redeem">Redeem Digital Comics</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        {/* <div className="main.footer__promotion-image-wrapper">
-          <img
-            className="imagen-insider"
-            src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvel_insider-topnav-logo-large2x.png"></img>
-        </div> */}
-        <div className="container-bloque2">
-          <a href="https://www.marvel.com/insider?cid=Dcom_navigation_20200929_insider_footer">
-            <img
-              className="imagen-insider"
-              src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvel_insider-topnav-logo-large2x.png"></img>
-            <div className="main-footer__promotion-info">
-              <h4>MARVEL INSIDER</h4>
-              <p>Get Rewarded for Being a Marvel Fan</p>
+    <>
+      <footer className="marvel-menu-footer">
+        <a className="menu-footer-logo" href="">
+          <img src="https://i.postimg.cc/MZY0Q1nX/logo-Marvel.png" alt="" />
+        </a>
+        <nav className="menu-footer-primer-link" aria-label="Primary footer navigation">
+          <ul>
+            <li className="menu-footer-link">
+              <a href="#">ABOUT MARVEL</a>
+            </li>
+            <li className="menu-footer-link">
+              <a href="#">HELP/FAQS</a>
+            </li>
+            <li className="menu-footer-link">
+              <a href="#">CAREERS</a>
+            </li>
+            <li className="menu-footer-link">
+              <a href="#">INTERNSHIPS</a>
+            </li>
+          </ul>
+        </nav>
+        <nav className="menu-footer-segundo-link" aria-label="Primary footer navigation">
+          <ul>
+            <li className="menu-footer-link">
+              <a href="#">ADVERTISING</a>
+            </li>
+            <li className="menu-footer-link">
+              <a href="#">DISNEY+</a>
+            </li>
+            <li className="menu-footer-link">
+              <a href="#">MARVELHQ.COM</a>
+            </li>
+            <li className="menu-footer-link">
+              <a href="#">REDEEM DIGITAL COMICS</a>
+            </li>
+          </ul>
+        </nav>
+        <nav className="menu-footer-promo">
+          <a className="menu-footer-promocion-link" href="#">
+            <div className="menu-footer-promocion-imagen">
+              <figure className="menu-footer-imagen">
+                <img
+                  className="menu-footer-promocion-imagen-isider"
+                  src="https://i.postimg.cc/zv9WYm8f/insider-Logo.png"
+                  alt="Marvel Insider"
+                />
+              </figure>
+            </div>
+            <div className="menu-footer-promocion-informacion">
+              <h4 className="menu-footer-promocion-titulo">MARVEL INSIDER</h4>
+              <p className="menu-footer-promocion-descripcion">
+                Get Rewarded for Being a Marvel Fan
+              </p>
             </div>
           </a>
-          <a href="https://www.marvel.com/unlimited?cid=dcom_navigation_20220712_unlimited_footer">
-            <div className="main.footer__promotion-image-wrapper">
-              <img
-                className="imagen-UNLIMIT"
-                src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/mu-logo-w-nav-2x-2021-02.png"></img>
-            </div>
-            <div className="main-footer__promotion-link">
-              <h4>MARVEL UNLIMITED</h4>
-              <p>Access Over 30,000+ Digital Comics</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div className="main-footer__follow">
+          <div className="menu-footer-promocion">
+            <a className="menu-footer-promocion-link" href="#">
+              <div className="menu-footer-promocion-imagen">
+                <figure className="menu-footer-imagen">
+                  <img
+                    className="menu-footer-promocion-imagen ilimitado"
+                    src="https://i.postimg.cc/25H8qP38/unlimited.png"
+                    alt="Marvel Insider"
+                  />
+                </figure>
+              </div>
+              <div className="menu-footer-promocion-informacion">
+                <h4 className="menu-footer-promocion-titulo">MARVEL UNLIMITED</h4>
+                <p className="menu-footer-promocion-descrpcion">
+                  Acces Over 30,000+ Digital Comics
+                </p>
+              </div>
+            </a>
+          </div>
+        </nav>
+        <nav className="menu-footer-seguir icono-1">
+          <h4 className="menu-footer-titulo">FOLLOW MARVEL</h4>
+          <ul className="menu-footer-social-links footer-social">
+            <li className="menu-footer-social-imagen">
+              <a href="">
+                <span>
+                  <img className="icono" src="https://i.postimg.cc/KcNzCqnN/facebook.png" alt="" />
+                </span>
+              </a>
+            </li>
+            <li className="menu-footer-social-imagen">
+              <a href="">
+                <span>
+                  <img className="icono" src="https://i.postimg.cc/W1SxvZ5x/twitter.png" alt="" />
+                </span>
+              </a>
+            </li>
+            <li className="menu-footer-social-imagen">
+              <a href="">
+                <span>
+                  <img className="icono" src="https://i.postimg.cc/90KZTLXs/instagram.png" alt="" />
+                </span>
+              </a>
+            </li>
+            <li className="menu-footer-social-imagen">
+              <a href="">
+                <span>
+                  <img className="icono" src="https://i.postimg.cc/HW9xfpqR/tumblr.png" alt="" />
+                </span>
+              </a>
+            </li>
+            <li className="menu-footer-social-imagen">
+              <a href="">
+                <span>
+                  <img className="icono" src="https://i.postimg.cc/ZnCMFYpn/youtube.png" alt="" />
+                </span>
+              </a>
+            </li>
+            <li className="menu-footer-social-imagen">
+              <a href="">
+                <span>
+                  <img className="icono" src="https://i.postimg.cc/nV4kgDcx/snapchat.png" alt="" />
+                </span>
+              </a>
+            </li>
+            <li className="menu-footer-social-imagen">
+              <a href="">
+                <span>
+                  <img
+                    className="icono"
+                    src="https://i.postimg.cc/MHnjWg2g/pinterest2.png"
+                    alt=""
+                  />
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </>
+  );
+}
+
+/*      <div className="main-footer__follow">
         <h4 className="texto-follow-marvel">Follow Marvel</h4>
-        <ul>
+        <ul className="ul-principal">
           <li>
             <a href="http://facebook.com/marvel">
               <span>
@@ -139,3 +207,4 @@ export default function MainFooter() {
     </footer>
   );
 }
+ */
