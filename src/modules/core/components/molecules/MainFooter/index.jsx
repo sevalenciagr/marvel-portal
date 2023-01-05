@@ -14,6 +14,7 @@ export default function MainFooter() {
   return (
     <>
       <footer className="marvel-menu-footer">
+        {/* <div className="Container-Footer-Completed"> */}
         <a className="menu-footer-logo" href="">
           <img src="https://i.postimg.cc/MZY0Q1nX/logo-Marvel.png" alt="" />
         </a>
@@ -141,6 +142,39 @@ export default function MainFooter() {
             </li>
           </ul>
         </nav>
+        {/* </div> */}
+        <div className="Text-Final-Footer">
+          <div className="Container-Text-Final">
+            <a href="https://disneytermsofuse.com/" className="Text-Final-Footer">
+              Terms of use
+            </a>
+            <a href="https://privacy.thewaltdisneycompany.com/en/" className="Text-Final-Footer">
+              Privacy Policy
+            </a>
+            <a
+              href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-us-privacy-rights/"
+              className="Text-Final-Footer">
+              Your US State Privacy Rights
+            </a>
+            <a
+              href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/"
+              className="Text-Final-Footer">
+              Children&apos;s Online Privacy Policy
+            </a>
+            <a href="https://www.marvel.com/corporate/license_tou" className="Text-Final-Footer">
+              License Agreement
+            </a>
+            <a
+              href="https://preferences-mgr.truste.com/?pid=disney01&aid=marvel01&type=marvel"
+              className="Text-Final-Footer">
+              Interest-Baseb Ads
+            </a>
+            <a href="https://www.marvel.com/corporate/insider_terms" className="Text-Final-Footer">
+              Marvel Insider Terms
+            </a>
+            <a className="Text-Final-Footer">&copy;2023 MARVEL</a>
+          </div>
+        </div>
       </footer>
     </>
   );
