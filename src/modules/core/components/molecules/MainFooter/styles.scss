@@ -1,8 +1,9 @@
 @import '../../../../../assets/styles/main.scss';
 .marvel-menu-footer {
   width: 100%;
-  display: grid;
-  grid-template-columns: 20% 15% 15% 25% 20%;
+  display: flex;
+  justify-content: center;
+  //grid-template-columns: 20% 15% 15% 25% 20%;
   color: white;
   height: 350px;
   align-items: center;
@@ -31,14 +32,30 @@
   img {
     width: 80px;
     height: 120px;
-    margin-left: 100px;
+    margin-top: -20px;
   }
+}
+
+.menu-footer-primer-link {
+  display: flex;
+  margin-left: 40px;
+}
+
+.menu-footer-segundo-link {
+  display: flex;
+  margin-left: 50px;
 }
 
 .menu-footer-promo {
   display: flex;
   flex-direction: column;
+  margin-left: 50px;
 }
+
+.menu-footer-seguir {
+  margin-left: 60px;
+}
+
 .menu-footer-promocion-link {
   @include centerFlex;
 
@@ -95,11 +112,18 @@
    display: flex;
    justify-content: center;
    position: absolute;
-   display: grid;
-   grid-template-columns: 30% 20% 15% 40% 35%;
-   left: 300px;
-   margin-top: 60px;
+   width: 100%;
+  // display: grid;
+  //  grid-template-columns: 30% 15% 15% 40% 35%;
+  //  left: 300px;
+   margin-top: -90px;
+   margin-left: 50px;
+  //  text-align: center;
 }  
+
+.Container-Footer-Completed nav {
+   gap: 50px;
+}
 
 .Text-Final-Footer {
     display: flex;
@@ -111,9 +135,10 @@
 .Container-Text-Final {
     display:flex;
     position: relative;
-    display: grid;
-    grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
-    grid-column-gap: 40px; 
-    left: 670px;
-    top: 110px;
+    //display: grid;
+    //grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
+    grid-column-gap: 20px; 
+    //justify-content: center;
+    //left: 670px;
+    top: 115px;
 }
