@@ -31,7 +31,7 @@ export default function SerieFilter() {
   }
 
   function onApply() {
-    console.log('Apply');
+    console.log('onApply');
   }
 
   return (
