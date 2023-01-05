@@ -2,9 +2,9 @@
 .marvel-menu-footer {
   width: 100%;
   display: grid;
-  grid-template-columns: 15% 15% 15% 35% 20%;
+  grid-template-columns: 20% 15% 15% 25% 20%;
   color: white;
-  height: 300px;
+  height: 350px;
   align-items: center;
   background-color: var(--color-primary-dark);
   color: var(--color-accent);
@@ -31,6 +31,7 @@
   img {
     width: 80px;
     height: 120px;
+    margin-left: 100px;
   }
 }
 
@@ -86,4 +87,28 @@
 .icono {
   width: 24px;
   height: 25px;
+}
+
+//Seccion final del Footer y Text finales.
+
+.Container-Footer-Completed {
+   display: flex;
+   justify-content: center;
+   position: relative;
+}
+
+.Text-Final-Footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Container-Text-Final {
+    display:flex;
+    position: relative;
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content max-content max-content max-content max-content;
+    grid-column-gap: 55px; 
+    left: 675px;
+    top: -5px;
 }
