@@ -72,18 +72,6 @@ const SeriesList = ({ series }) => {
   return <ul className="series__list">{renderSeries(series)}</ul>;
 };
 
-SeriesList.propTypes = {
-  series: PropTypes.array
-  // id: PropTypes.number,
-  // title: PropTypes.string
-};
-//Funciones para los botones
-SeriesButtons.propTypes = {
-  onClose: PropTypes.func,
-  onReset: PropTypes.func,
-  onApply: PropTypes.func
-};
-
 function SeriesButtons({ onClose, onReset, onApply }) {
   return (
     <div className="series__buttons--container">
@@ -103,3 +91,21 @@ function SeriesButtons({ onClose, onReset, onApply }) {
     </div>
   );
 }
+
+SeriesList.propTypes = {
+  series: PropTypes.array
+  // id: PropTypes.number,
+  // title: PropTypes.string
+};
+
+SeriesButtons.propTypes = {
+  onClose: PropTypes.func,
+  onReset: PropTypes.func,
+  onApply: PropTypes.func
+};
+
+Serie.propTypes = {
+  serie: PropTypes.object,
+  id: PropTypes.number,
+  title: PropTypes.string
+};
