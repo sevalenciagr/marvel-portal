@@ -1,6 +1,15 @@
+// import React from 'react';
+// import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
+// import FeaturedCharacters from '../../components/FeaturedCharacteres';
+// import MovieFilter from 'src/modules/core/components/molecules/MovieFilter';
+// import { useState } from 'react';
+// import './styles.scss';
+// import ModalAuto from 'src/modules/core/components/molecules/ModalAuto/ModalAuto';
+// import { useEffect } from 'react';
 import React from 'react';
 import CharactersGrid from '@/modules/marvel-characters/components/CharacterGrid';
 import './styles.scss';
+
 export function CharacterPage() {
   return (
     <div className="mvl-characters-page">
