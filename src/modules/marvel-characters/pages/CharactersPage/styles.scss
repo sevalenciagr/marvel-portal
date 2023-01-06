@@ -1,25 +1,207 @@
-.mvl-characters-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var( --space-lg);
+.mvl-characters-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: var(--space-lg); */
 }
 
-.mvl-characters-page-header{
-    background-image: url("/assets/images/characters_banner.jpeg");
-    min-height: 300px;
+.mvl-characters-page-header {
+  background-image: url('/assets/images/characters_banner.jpeg');
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-accent);
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-section-card {
+  width: 100%;
+  background:var(--color-primary-dark);
+
+}
+
+.mvl-section-card {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container-Featured {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    color: var(--color-accent);
-    flex-direction: column;
+    position: relative;  //Pocision para el contedor
+    margin-right: 15px;
     width: 100%;
-}
-
-.mvl-section-card{
+    height: 445px;
+    margin-top: 19px;
+  }
+  
+  .Featured-Characters {
     min-height: 200px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--color-border);
+    // margin-left: 805px;
+    //border: 1px solid var(--color-border);
+    margin-top: 0%; //10px
+  }
+  
+  //seccion FEATURED SHARACTERS Jeferson Hernandez
+  
+  //Estilos y orden del Titlo FEATURED SHARACTERS.
+  
+  .Container-Card-Title {
+    margin-top: -36%; //-350px
+    // margin-right: -37%; //-380px
+  }
+  
+  .Title-featured-characters {
+    font-family: RobotoCondensed, 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 368px;
+    color: black;
+    // margin-left: -405px;
+    position: absolute;   //Posicion para mover titilo del contenedor
+  }
+
+//Funcion pseudo-elementos ::before y ::after para rayas diagonales.
+
+.Title-featured-characters::after,
+.Title-featured-characters::before {
+  background-color: rgb(198, 169, 114);
+  content: ''; //Se agregan rayas diagonales.
+  display: block;
+  height: 2px; //Tamano de la letra
+  position: absolute;
+  transform: rotate(-45deg) skewX(45deg); //Metodo para poner las rayas diagonales.
+  width: 20px; //Ancho de la rayitas diagonales
+}
+
+.Title-featured-characters::before {
+  //Raya diagonal arriba,
+  margin-left: 70px; //posicion de ambas rayas diagonales
+  margin-top: -8px;
+}
+
+.Title-featured-characters::after {
+  //Raya diagonal abajo
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+//Estilo principal del las 6 imagenes grip layout.
+
+.Container-Cards-grip-6 { 
+    display: grid;    //Hacemos css grip layout.
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-column-gap: 10px;       //10px
+    margin-top:  8%;            //80px
+    // margin-left: -4.3%;          //-42px
+    //margin-right: -4%;           //Se mueve a la derecha para centrar con todos.
+    justify-content: center; 
+}
+
+//Estilos del contenedor general de cada personaje.
+
+.Cards-General-Characters {
+  height: 355px;
+  width: 154px;
+  overflow: hidden;
+  background: var(--color-primary-dark);
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+//Funsion pseudo after elemento para el recorte final de contenedor de cada personaje.
+
+.Cards-General-Characters ::after {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: #fff;
+  border-style: solid;
+  border-top-color: transparent;
+  border-width: 12px 12px 0 0;
+  bottom: -178px;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: auto;
+  z-index: 40;
+}
+
+//Estilos del contenedor de la imagen
+
+.Card-img {
+  background: black;
+  height: 50%;
+  position: relative;
+}
+
+//Funsion Pseudo-elemento de la linea roja horizontal de cada personaje.
+
+.Card-img::before {
+  content: '';
+  width: 100%;
+  height: 5px;
+  background: red;
+  position: absolute;
+  bottom: -5px;
+  z-index: 2;
+}
+
+//Estilos de la imagen.
+
+.Img-Cards {
+  width: 160px;
+  height: 180px;
+  object-fit: cover;
+  object-position: left bottom;
+  transform: scaleX(1);
+  border-bottom: 2px solid red;
+}
+
+.Cards-General-Characters:hover .Img-Cards {
+  transform: scale(1.1); //Funsion Hover que nos permite mover la imagen al poner el click
+  height: 97%;
+}
+
+//Estilos del contener del titulo de cada uno de los personajes.
+
+.Cards-General-Characters:hover .Cards-Title-Characters {
+  height: 355px; //Funsion hover que nos pinta el color rojo en el card.
+  background: red;
+}
+
+.Cards-Title-Characters {
+  padding: var(--space-sm);
+  height: 2px;
+  transition: height 1.2s; //Transicion de tiempo al poner el click.
+}
+
+.Title-Featured-Character {
+  font-weight: 900;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+//EStilos ontenedor subtitulo Ironheart , del personaje RIRI WILLIANS.
+
+.Cards-Title-Characters-Secondary {
+  bottom: 10px;
+  //position: absolute;
+  padding-right: 15px;
+  margin-top: 110px;
+  font-size: 10px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.Cards-Title-Characters-Secondary-text {
+  font-size: 400 12px/1 RobotoCondensed Bold, Trebuchet MS, Helvetica, Arial, sans-serif;
+  color: #bbb;
+  letter-spacing: 1px;
+  transition: all 0.17s ease-in-out;
 }

@@ -15,7 +15,9 @@ export default function CharacterGridPaginated() {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [queryParams, setQueryParams] = useState({});
+  const [queryParams, setQueryParams] = useState({
+    name: ''
+  });
 
   useEffect(() => {
     fetchCharactersAtPage();
@@ -27,6 +29,7 @@ export default function CharacterGridPaginated() {
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
+    console.log(data.total);
   }
 
   const onPageChange = (newPage) => {
@@ -39,10 +42,19 @@ export default function CharacterGridPaginated() {
 
   return (
     <>
-      <Filter query={queryParams} onQueryChange={onQueryChange} />
+      <Filter
+        characters={characters}
+        query={queryParams}
+        onQueryChange={onQueryChange}
+        totalItems={totalItems}
+      />
       <div className="mvl-grid mvl-grid-6">
         <CharacterGrid
-          characters={characters}
+          characters={characters.filter(
+            (item) =>
+              queryParams.name.length < 3 ||
+              item.name.toLowerCase().includes(queryParams.name.trim().toLowerCase())
+          )}
           isLoading={isLoading}
           itemsPerPage={ITEMS_PER_PAGE}
         />
@@ -70,6 +82,7 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
 
   if (characters.length === 0) {
     return <EmptyState />;
+    // return <content-type />;
   }
 
   return characters.map(({ name, image }, index) => (
@@ -77,8 +90,26 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
   ));
 }
 
-const EmptyState = () => {
-  return <h1>No elements found</h1>;
+{
+  /* <div className="content-type"> Error </div>;
+<div className="name" aria-live="assertive">
+  <span aria-live="assertive">No</span>
+  <span aria-live="assertive"> </span>
+  <span className="highlight" aria-live="assertive">
+    Matches
+  </span>
+  <span aria-live="assertive"> </span>
+  <span className="highlight" aria-live="assertive">
+    Found!
+  </span>
+</div>; */
+}
+export const EmptyState = () => {
+  return (
+    <h2>
+      <strong> SORRY, NOTHING TO SEE HERE</strong>
+    </h2>
+  );
 };
 
 const CharacterGridSkeleton = ({ amount }) => {

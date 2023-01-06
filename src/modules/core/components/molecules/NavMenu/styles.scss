@@ -3,7 +3,7 @@
     background-color: var(--color-primary-dark);
     height: 60px;
     display: inline-flex;
-    width: 100vw;
+    width: 98.7vw;
     justify-content: space-between;
     padding: 16px 100px;
     box-sizing: border-box;
@@ -29,6 +29,7 @@
     &:hover{
         color: var(--color-primary-light);
     }
+    margin-left: 6%;
 }
 
 .mlv-navbar__image{
