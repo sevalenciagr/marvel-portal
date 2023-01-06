@@ -8,14 +8,14 @@ Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
 };
 
-export default function Filter({ characters, query, onQueryChange, totalItems }) {
+export default function Filter({ totalItems }) {
   const [toggle, setToggle] = useState(false);
   const [search, setSearch] = useState('');
   const searcher = (e) => {
     setSearch(e.target.value);
     console.log(e.target.value);
   };
-    const modalAuto = (a) => {
+  const modalAuto = (a) => {
     setSearch(a);
   };
   function Peticion() {
