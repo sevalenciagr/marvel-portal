@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import ModalAuto from '../ModalAuto/ModalAuto';
 import SerieFilter from './SerieFilter';
 import { RiArrowDropDownFill } from 'react-icons/ri';
