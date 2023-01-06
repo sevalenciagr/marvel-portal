@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
-import MovieFilter from './MovieFilter';
 import { useState } from 'react';
 import ModalAuto from '../ModalAuto/ModalAuto';
-
+import SerieFilter from './SerieFilter';
+import { RiArrowDropDownFill } from 'react-icons/ri';
 Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
 };
 
-export default function Filter({ totalItems }) {
+export default function Filter({ characters, query, onQueryChange, totalItems }) {
+  const [toggle, setToggle] = useState(false);
   const [search, setSearch] = useState('');
   const searcher = (e) => {
     setSearch(e.target.value);
     console.log(e.target.value);
   };
-  const modalAuto = (a) => {
+    const modalAuto = (a) => {
     setSearch(a);
   };
   function Peticion() {
@@ -23,6 +24,9 @@ export default function Filter({ totalItems }) {
       return <ModalAuto search={search} modalAuto={modalAuto} />;
     }
   }
+  const onToggle = () => {
+    setToggle((prevToggle) => !prevToggle);
+  };
 
   return (
     <div>
@@ -71,12 +75,46 @@ export default function Filter({ totalItems }) {
               </div>
             </div>
           </div>
-          <MovieFilter />
+          <SerieFilter />
         </div>
-        <div>
-          <h5 className="results_totalItems">{totalItems} RESULTS </h5>
+        <div className="sort-results">
+          <h5 className="results_totalItems">{totalItems} RESULTS TOTAL ITEMS API </h5>
+          {/* sort */}
+          <div className="sort_results_dropdown_sortby">
+            SORT BY
+            <div className="sort_results_dropdown">
+              <div className="dropdown dropdown_desktop">
+                <div className="drop_trigger">
+                  <div className="drop_trigger_content" onClick={onToggle}>
+                    <span className="dropdown_selected-label">Z-A</span>
+                    <div className="dropdown__selected-cart">
+                      <span className="icon-svg">
+                        <RiArrowDropDownFill className="dropdown_r" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {toggle && <Sortby />}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function Sortby() {
+  return (
+    <div className="dropdown_menu">
+      <div className="dropdown_content">
+        <a href="" value="A-Z" className="dropdown_item">
+          A-Z
+        </a>
+        <a href="" value="Z-A" className="dropdown_item">
+          Z-A
+        </a>
+      </div>
     </div>
   );
 }

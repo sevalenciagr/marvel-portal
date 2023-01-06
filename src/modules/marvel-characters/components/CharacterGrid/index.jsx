@@ -104,7 +104,7 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
   </span>
 </div>; */
 }
-const EmptyState = () => {
+export const EmptyState = () => {
   return (
     <h2>
       <strong> SORRY, NOTHING TO SEE HERE</strong>

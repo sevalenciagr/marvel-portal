@@ -72,7 +72,7 @@
     letter-spacing: 0;
 }
 
-button{
+.contenedor-main button{
     background-color: #e62429;
     margin-left: 16px;
     text-align: center;
@@ -86,7 +86,7 @@ button{
     width: auto;
     z-index: 10;
 }
-button::after{
+.contenedor-main button::after{
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
