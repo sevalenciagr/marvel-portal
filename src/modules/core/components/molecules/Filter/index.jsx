@@ -11,6 +11,23 @@ Filter.propTypes = {
 };
 
 export default function Filter({ characters, query, onQueryChange, totalItems }) {
+  const [toggle, setToggle] = useState(false);
+  const [search, setSearch] = useState('');
+  const searcher = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
+  };
+  const modalAuto = (a) => {
+    setSearch(a);
+  };
+  function Peticion() {
+    if (search.length >= 3) {
+      return <ModalAuto search={search} modalAuto={modalAuto} />;
+    }
+  }
+  const onToggle = () => {
+    setToggle((prevToggle) => !prevToggle);
+  };
   return (
     <div>
       <section className="page__component page__component--search page__component--search_bar section__color__ firstComponent">
