@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
-import ModalAuto from '../ModalAuto/ModalAuto';
 import SerieFilter from './SerieFilter';
-import { RiArrowDropDownFill } from 'react-icons/ri';
+
 Filter.propTypes = {
+  characters: PropTypes.array.isRequired,
+  query: { name: PropTypes.string.isRequired },
+  onQueryChange: PropTypes.func.isRequired,
   totalItems: PropTypes.number.isRequired
 };
 
-export default function Filter({ totalItems }) {
+export default function Filter({ characters, query, onQueryChange, totalItems }) {
   const [toggle, setToggle] = useState(false);
   const [search, setSearch] = useState('');
   const searcher = (e) => {
@@ -26,7 +28,6 @@ export default function Filter({ totalItems }) {
   const onToggle = () => {
     setToggle((prevToggle) => !prevToggle);
   };
-
   return (
     <div>
       <section className="page__component page__component--search page__component--search_bar section__color__ firstComponent">
@@ -57,12 +58,11 @@ export default function Filter({ totalItems }) {
                   autoComplete="off"
                   placeholder="search"
                   aria-autocomplete="list"
-                  value={search}
-                  onChange={searcher}
+                  value={query.name}
+                  onChange={(event) => onQueryChange({ ...query, name: event.target.value })}
                   list="suggestions"
                 />
-                <Peticion />
-                {/* <datalist id="suggestions">
+                <datalist id="suggestions">
                   {query.name.length >= 3 &&
                     characters
                       .filter((item) =>
@@ -70,50 +70,16 @@ export default function Filter({ totalItems }) {
                       )
                       .slice(0, 5)
                       .map((item) => <option key={item.name}>{item.name}</option>)}
-                </datalist> */}
+                </datalist>
               </div>
             </div>
           </div>
           <SerieFilter />
         </div>
-        <div className="sort-results">
-          <h5 className="results_totalItems">{totalItems} RESULTS TOTAL ITEMS API </h5>
-          {/* sort */}
-          <div className="sort_results_dropdown_sortby">
-            SORT BY
-            <div className="sort_results_dropdown">
-              <div className="dropdown dropdown_desktop">
-                <div className="drop_trigger">
-                  <div className="drop_trigger_content" onClick={onToggle}>
-                    <span className="dropdown_selected-label">Z-A</span>
-                    <div className="dropdown__selected-cart">
-                      <span className="icon-svg">
-                        <RiArrowDropDownFill className="dropdown_r" />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                {toggle && <Sortby />}
-              </div>
-            </div>
-          </div>
+        <div>
+          <h5 className="results_totalItems">{totalItems} RESULTS </h5>
         </div>
       </section>
-    </div>
-  );
-}
-
-function Sortby() {
-  return (
-    <div className="dropdown_menu">
-      <div className="dropdown_content">
-        <a href="" value="A-Z" className="dropdown_item">
-          A-Z
-        </a>
-        <a href="" value="Z-A" className="dropdown_item">
-          Z-A
-        </a>
-      </div>
     </div>
   );
 }
