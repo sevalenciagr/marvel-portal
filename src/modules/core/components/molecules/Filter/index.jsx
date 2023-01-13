@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
 import SerieFilter from './SerieFilter';
+import { RiArrowDropDownFill } from 'react-icons/ri';
 
 Filter.propTypes = {
   characters: PropTypes.array.isRequired,
@@ -12,22 +13,11 @@ Filter.propTypes = {
 
 export default function Filter({ characters, query, onQueryChange, totalItems }) {
   const [toggle, setToggle] = useState(false);
-  const [search, setSearch] = useState('');
-  const searcher = (e) => {
-    setSearch(e.target.value);
-    console.log(e.target.value);
-  };
-  const modalAuto = (a) => {
-    setSearch(a);
-  };
-  function Peticion() {
-    if (search.length >= 3) {
-      return <ModalAuto search={search} modalAuto={modalAuto} />;
-    }
-  }
+
   const onToggle = () => {
     setToggle((prevToggle) => !prevToggle);
   };
+
   return (
     <div>
       <section className="page__component page__component--search page__component--search_bar section__color__ firstComponent">
@@ -76,10 +66,44 @@ export default function Filter({ characters, query, onQueryChange, totalItems })
           </div>
           <SerieFilter />
         </div>
-        <div>
-          <h5 className="results_totalItems">{totalItems} RESULTS </h5>
+        <div className="sort-results">
+          <h5 className="results_totalItems">{totalItems} RESULTS TOTAL ITEMS API </h5>
+          {/* sort */}
+          <div className="sort_results_dropdown_sortby">
+            SORT BY
+            <div className="sort_results_dropdown">
+              <div className="dropdown dropdown_desktop">
+                <div className="drop_trigger">
+                  <div className="drop_trigger_content" onClick={onToggle}>
+                    <span className="dropdown_selected-label">Z-A</span>
+                    <div className="dropdown__selected-cart">
+                      <span className="icon-svg">
+                        <RiArrowDropDownFill className="dropdown_r" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {toggle && <Sortby />}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function Sortby() {
+  return (
+    <div className="dropdown_menu">
+      <div className="dropdown_content">
+        <a href="" value="A-Z" className="dropdown_item">
+          A-Z
+        </a>
+        <a href="" value="Z-A" className="dropdown_item">
+          Z-A
+        </a>
+      </div>
     </div>
   );
 }
