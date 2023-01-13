@@ -8,7 +8,7 @@ CharacterCard.propTypes = {
   isSkeleton: PropTypes.bool
 };
 
-export default function CharacterCard({ image, name, isSkeleton }) {
+export default function CharacterCard({ image, name, isSkeleton, description }) {
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">
@@ -16,7 +16,7 @@ export default function CharacterCard({ image, name, isSkeleton }) {
       </div>
       <div className="mvl-character-card__body">
         <p className="Title-character">{name}</p>
-        <h4 className="u-no-margin">{name}</h4>
+        <h4 className="u-no-margin">{description}</h4>
       </div>
     </div>
   );
