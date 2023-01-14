@@ -18,8 +18,7 @@
 
 .container-section-card {
   width: 100%;
-  background:var(--color-primary-dark);
-
+  background: var(--color-primary-dark);
 }
 
 .mvl-section-card {
@@ -30,48 +29,48 @@
 }
 
 .Container-Featured {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;  //Pocision para el contedor
-    margin-right: 15px;
-    width: 100%;
-    height: 445px;
-    margin-top: 19px;
-  }
-  
-  .Featured-Characters {
-    min-height: 200px;
-    display: flex;
-    // margin-left: 805px;
-    //border: 1px solid var(--color-border);
-    margin-top: 0%; //10px
-  }
-  
-  //seccion FEATURED SHARACTERS Jeferson Hernandez
-  
-  //Estilos y orden del Titlo FEATURED SHARACTERS.
-  
-  .Container-Card-Title {
-    margin-top: -36%; //-350px
-    // margin-right: -37%; //-380px
-  }
-  
-  .Title-featured-characters {
-    font-family: RobotoCondensed, 'Trebuchet MS', Helvetica, Arial, sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    margin-top: 368px;
-    color: black;
-    // margin-left: -405px;
-    position: absolute;   //Posicion para mover titilo del contenedor
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; //Pocision para el contedor
+  margin-right: 15px;
+  width: 100%;
+  height: 445px;
+  margin-top: 19px;
+}
+
+.Featured-Characters {
+  min-height: 200px;
+  display: flex;
+  // margin-left: 805px;
+  //border: 1px solid var(--color-border);
+  margin-top: 0%; //10px
+}
+
+//seccion FEATURED SHARACTERS Jeferson Hernandez
+
+//Estilos y orden del Titlo FEATURED SHARACTERS.
+
+.Container-Card-Title {
+  margin-top: -36%; //-350px
+  // margin-right: -37%; //-380px
+}
+
+.Title-featured-characters {
+  font-family: 'RobotoCondensed', 'Trebuchet MS', Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 368px;
+  color: black;
+  // margin-left: -405px;
+  position: absolute; //Posicion para mover titilo del contenedor
+}
 
 //Funcion pseudo-elementos ::before y ::after para rayas diagonales.
 
 .Title-featured-characters::after,
 .Title-featured-characters::before {
-  background-color: rgb(198, 169, 114);
+  background-color: rgb(155, 104, 11);
   content: ''; //Se agregan rayas diagonales.
   display: block;
   height: 2px; //Tamano de la letra
@@ -94,14 +93,14 @@
 
 //Estilo principal del las 6 imagenes grip layout.
 
-.Container-Cards-grip-6 { 
-    display: grid;    //Hacemos css grip layout.
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-column-gap: 10px;       //10px
-    margin-top:  8%;            //80px
-    // margin-left: -4.3%;          //-42px
-    //margin-right: -4%;           //Se mueve a la derecha para centrar con todos.
-    justify-content: center; 
+.Container-Cards-grip-6 {
+  display: grid; //Hacemos css grip layout.
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-column-gap: 10px; //10px
+  margin-top: 8%; //80px
+  // margin-left: -4.3%;          //-42px
+  //margin-right: -4%;           //Se mueve a la derecha para centrar con todos.
+  justify-content: center;
 }
 
 //Estilos del contenedor general de cada personaje.
@@ -120,7 +119,7 @@
 .Cards-General-Characters ::after {
   border-bottom-color: transparent;
   border-left-color: transparent;
-  border-right-color: #fff;
+  border-right-color: rgb(255, 255, 255);
   border-style: solid;
   border-top-color: transparent;
   border-width: 12px 12px 0 0;
@@ -160,7 +159,7 @@
   object-fit: cover;
   object-position: left bottom;
   transform: scaleX(1);
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid rgb(112, 201, 40);
 }
 
 .Cards-General-Characters:hover .Img-Cards {
@@ -200,7 +199,7 @@
 }
 
 .Cards-Title-Characters-Secondary-text {
-  font-size: 400 12px/1 RobotoCondensed Bold, Trebuchet MS, Helvetica, Arial, sans-serif;
+  font-size: 500 12px/1 RobotoCondensed Bold, Trebuchet MS, Helvetica, Arial, sans-serif;
   color: #bbb;
   letter-spacing: 1px;
   transition: all 0.17s ease-in-out;
