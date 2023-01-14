@@ -145,7 +145,7 @@
   content: '';
   width: 100%;
   height: 5px;
-  background: red;
+  background: #e62429;
   position: absolute;
   bottom: -5px;
   z-index: 2;
@@ -159,7 +159,7 @@
   object-fit: cover;
   object-position: left bottom;
   transform: scaleX(1);
-  border-bottom: 2px solid rgb(112, 201, 40);
+  border-bottom: 2px solid rgb(5, 5, 5);
 }
 
 .Cards-General-Characters:hover .Img-Cards {
@@ -171,7 +171,7 @@
 
 .Cards-General-Characters:hover .Cards-Title-Characters {
   height: 355px; //Funsion hover que nos pinta el color rojo en el card.
-  background: red;
+  background: #e62429;
 }
 
 .Cards-Title-Characters {
