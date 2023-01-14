@@ -164,6 +164,7 @@
 
 .Cards-General-Characters:hover .Img-Cards {
   transform: scale(1.1); //Funsion Hover que nos permite mover la imagen al poner el click
+  transition: transform 1s;
   height: 97%;
 }
 
