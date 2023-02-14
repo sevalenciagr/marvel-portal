@@ -1,28 +1,19 @@
 import React, { useState } from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
-import ModalAuto from '../ModalAuto/ModalAuto';
 import SerieFilter from './SerieFilter';
 import { RiArrowDropDownFill } from 'react-icons/ri';
+
 Filter.propTypes = {
+  characters: PropTypes.array.isRequired,
+  query: { name: PropTypes.string.isRequired },
+  onQueryChange: PropTypes.func.isRequired,
   totalItems: PropTypes.number.isRequired
 };
 
-export default function Filter({ totalItems }) {
+export default function Filter({ characters, query, onQueryChange, totalItems }) {
   const [toggle, setToggle] = useState(false);
-  const [search, setSearch] = useState('');
-  const searcher = (e) => {
-    setSearch(e.target.value);
-    console.log(e.target.value);
-  };
-  const modalAuto = (a) => {
-    setSearch(a);
-  };
-  function Peticion() {
-    if (search.length >= 3) {
-      return <ModalAuto search={search} modalAuto={modalAuto} />;
-    }
-  }
+
   const onToggle = () => {
     setToggle((prevToggle) => !prevToggle);
   };
@@ -57,12 +48,11 @@ export default function Filter({ totalItems }) {
                   autoComplete="off"
                   placeholder="search"
                   aria-autocomplete="list"
-                  value={search}
-                  onChange={searcher}
+                  value={query.name}
+                  onChange={(event) => onQueryChange({ ...query, name: event.target.value })}
                   list="suggestions"
                 />
-                <Peticion />
-                {/* <datalist id="suggestions">
+                <datalist id="suggestions">
                   {query.name.length >= 3 &&
                     characters
                       .filter((item) =>
@@ -70,7 +60,7 @@ export default function Filter({ totalItems }) {
                       )
                       .slice(0, 5)
                       .map((item) => <option key={item.name}>{item.name}</option>)}
-                </datalist> */}
+                </datalist>
               </div>
             </div>
           </div>

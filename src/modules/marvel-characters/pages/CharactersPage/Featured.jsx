@@ -5,7 +5,7 @@ export function Featured() {
     <div className="Container-Featured">
       <section className="Featured-Characters">
         <div className="Container-Card-Title">
-          <h1 className="Title-featured-characters">FEATURED CHARACTERS</h1>
+          <h1 className="Title-featured-characters"> FEATURED CHARACTERS</h1>
         </div>
         <div className="Container-Cards-grip-6">
           <div className="Cards-General-Characters">
